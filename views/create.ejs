@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('layouts/header') -%>
+
+    <body>
+        <!-- Navigation-->
+        <%- include('layouts/navbar') -%>
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('/img/post-sample-image.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Create New Post</h1>
+                            <span class="subheading">Wanna post blog? Please create new post.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        
+                        <div class="my-5">
+                            <form method="post" action="/posts/store" enctype="multipart/form-data">
+                                <div class="form-floating">
+                                    <input type="text" name="title" class="form-control"/>
+                                    <label for="title">Title</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <textarea type="text" name="body" class="form-control" style="height: 12rem"></textarea>
+                                    <label for="body">Description</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <input type="file" name="image" id="image" class="form-control"/>
+                                    <label for="image">Image</label>
+                                </div>
+                                <br/>
+                                <input type="submit" class="btn btn-primary text-uppercase enabled"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer-->
+        <%- include('layouts/footer') -%>
+
+        <!-- Scripts -->
+        <%- include('layouts/scripts') -%>
+    </body>
+</html>
