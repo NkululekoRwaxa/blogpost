@@ -59,7 +59,7 @@ app.use(flash());
 /**
  * talk to MongoDB from Node using Mongoose library 
  */
-mongoose.connect("MongoDB Atlas URI", {useNewUrlParser:true});
+mongoose.connect('mongodb+srv://codecollege_31:codecollege_31@cluster0.mesy7wf.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser:true});
 
 
 /**
